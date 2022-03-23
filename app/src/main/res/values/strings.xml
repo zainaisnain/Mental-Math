@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mental Math</string>
+    <string name="wrong">Wrong:</string>
+    <string name="correct">Correct:</string>
 </resources>
