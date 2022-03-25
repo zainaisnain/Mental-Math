@@ -2,4 +2,6 @@
     <string name="app_name">Mental Math</string>
     <string name="wrong">Wrong:</string>
     <string name="correct">Correct:</string>
+    <string name="diaMessage">Fantastic! You are Correct!</string>
+    <string name="diaMessage2">Sorry! You are Wrong!</string>
 </resources>
