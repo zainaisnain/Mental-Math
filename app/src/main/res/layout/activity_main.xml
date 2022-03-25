@@ -38,4 +38,11 @@
         android:text="Division"
         android:gravity="center"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/about_us_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About us"
+        android:gravity="center"/>
+
 </LinearLayout>
