@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/jqntdfewx7q61">
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addition_btn"
