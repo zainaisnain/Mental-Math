@@ -1,5 +1,6 @@
 package com.example.mentalmath
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -76,6 +77,8 @@ class Addition : AppCompatActivity() {
             alert.setPositiveButton("Ok"){
                     dialogInterface, which ->
                 Toast.makeText(applicationContext,"Conrgats, You are a math Genius!", Toast.LENGTH_SHORT).show()
+                finish()
+                startActivity(getIntent())
             }
             val alertDialog: AlertDialog = alert.create()
             alertDialog.setCancelable(false)
@@ -84,15 +87,17 @@ class Addition : AppCompatActivity() {
 
             val alert = AlertDialog.Builder(this)
             //Title for alert dialog
-            alert.setTitle("$sum " + " $text")
+            alert.setTitle("Mental Math")
 
             //set message for alert dialog
             alert.setMessage(R.string.diaMessage2)
 
             //performing positive action
-            alert.setPositiveButton("Ok"){
+            alert.setPositiveButton("Try Again"){
                     dialogInterface, which ->
-                Toast.makeText(applicationContext,"$sum " + " $text", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Sorry, Please Try Again!", Toast.LENGTH_SHORT).show()
+                editText2.setText("0")
+                isNewOp = true
             }
             val alertDialog: AlertDialog = alert.create()
             alertDialog.setCancelable(false)
