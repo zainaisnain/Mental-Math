@@ -30,7 +30,7 @@ class Addition : AppCompatActivity() {
 
         equation = "$firstnum + $secondnum"
 
-        var question = findViewById<TextView>(R.id.editText)
+        val question = findViewById<TextView>(R.id.editText)
         question.text = equation
 
     }
@@ -40,7 +40,7 @@ class Addition : AppCompatActivity() {
         }
         isNewOp = false
         var butclick = editText2.text.toString()
-        var butSelect:Button = view as Button
+        val butSelect:Button = view as Button
         when(butSelect.id){
             bu0.id -> {butclick += "0"}
             bu1.id -> {butclick += "1"}
@@ -64,7 +64,7 @@ class Addition : AppCompatActivity() {
     fun entEvent(view: View){
         val sum = (firstnum + secondnum).toString()
         val text = editText2.text.toString()
-        if (sum == text){
+        if (sum == text.trim()){
             val alert = AlertDialog.Builder(this)
             //Title for alert dialog
             alert.setTitle("Mental Math")
@@ -75,13 +75,12 @@ class Addition : AppCompatActivity() {
             //performing positive action
             alert.setPositiveButton("Ok"){
                     dialogInterface, which ->
-                Toast.makeText(applicationContext,"asdas", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Conrgats, You are a math Genius!", Toast.LENGTH_SHORT).show()
             }
             val alertDialog: AlertDialog = alert.create()
             alertDialog.setCancelable(false)
             alertDialog.show()
-        }
-        if (sum!=text){
+        }else{
 
             val alert = AlertDialog.Builder(this)
             //Title for alert dialog
