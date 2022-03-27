@@ -4,4 +4,7 @@
     <string name="correct">Correct:</string>
     <string name="diaMessage">Fantastic! You are Correct!</string>
     <string name="diaMessage2">Sorry! You are Wrong!</string>
+    <string name="divisionAlert">NOTE:
+                                     In order to Answer The Division Section
+                                     You need to answer it in Two Decimal Places!</string>
 </resources>

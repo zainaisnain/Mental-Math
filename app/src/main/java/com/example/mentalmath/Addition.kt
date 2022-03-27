@@ -10,14 +10,26 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_addition.*
+import kotlinx.android.synthetic.main.activity_addition.bu0
+import kotlinx.android.synthetic.main.activity_addition.bu1
+import kotlinx.android.synthetic.main.activity_addition.bu2
+import kotlinx.android.synthetic.main.activity_addition.bu3
+import kotlinx.android.synthetic.main.activity_addition.bu4
+import kotlinx.android.synthetic.main.activity_addition.bu5
+import kotlinx.android.synthetic.main.activity_addition.bu6
+import kotlinx.android.synthetic.main.activity_addition.bu7
+import kotlinx.android.synthetic.main.activity_addition.bu8
+import kotlinx.android.synthetic.main.activity_addition.bu9
+import kotlinx.android.synthetic.main.activity_addition.editText2
+import kotlinx.android.synthetic.main.activity_division.*
 
 
 class Addition : AppCompatActivity() {
 
     private var correctAnswer: Int = 0
     private var equation: String = ""
-    private var firstnum = (1..10).random()
-    private var secondnum = (1..10).random()
+    private var firstnum = (1..500).random()
+    private var secondnum = (1..500).random()
     // Stats
     private var num_of_correct = 0
     private var wrong = 0
@@ -53,7 +65,6 @@ class Addition : AppCompatActivity() {
             bu7.id -> {butclick += "7"}
             bu8.id -> {butclick += "8"}
             bu9.id -> {butclick += "9"}
-
         }
         editText2.setText(butclick)
     }
@@ -76,7 +87,7 @@ class Addition : AppCompatActivity() {
             //performing positive action
             alert.setPositiveButton("Ok"){
                     dialogInterface, which ->
-                Toast.makeText(applicationContext,"Conrgats, You are a math Genius!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"WOW, You are a math Genius!", Toast.LENGTH_SHORT).show()
                 finish()
                 startActivity(getIntent())
             }
