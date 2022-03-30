@@ -7,4 +7,9 @@
     <string name="divisionAlert">NOTE:
                                      In order to Answer The Division Section
                                      You need to answer it in Two Decimal Places!</string>
+    <string name="TEAM">TEAM CREDITS</string>
+    <string name="leader">Rahmat Zaina Isnain</string>
+    <string name="mem1"> Rovinjan Medrano</string>
+    <string name="mem2"> Jose Rafael Cruz</string>
+    <string name="mem3"> Alec Bryan Sison</string>
 </resources>

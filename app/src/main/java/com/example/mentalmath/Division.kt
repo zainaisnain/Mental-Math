@@ -95,7 +95,7 @@ class Division : AppCompatActivity() {
         }else{
             val alert = AlertDialog.Builder(this)
             //Title for alert dialog
-            alert.setTitle("$sum")
+            alert.setTitle("Mental Math")
 
             //set message for alert dialog
             alert.setMessage(R.string.diaMessage2)

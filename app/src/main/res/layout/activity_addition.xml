@@ -39,7 +39,7 @@
             <Button
                 android:id="@+id/bu7"
                 android:layout_weight="1"
-                android:layout_width="30pt"
+                android:layout_width="25dp"
                 android:layout_height="30pt"
                 android:text="7"
                 android:onClick="numberEvent">

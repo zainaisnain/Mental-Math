@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MentalMath"
         tools:targetApi="31">
         <activity
-            android:name=".Results"
+            android:name=".AboutUS"
             android:exported="false" />
         <activity
             android:name=".Division"

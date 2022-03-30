@@ -12,6 +12,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val aboutus_btn = findViewById<Button>(R.id.about_us)
+        aboutus_btn.setOnClickListener(){
+            val intent = Intent(this, AboutUS::class.java)
+            startActivity(intent)
+        }
+
         val addition_btn = findViewById<Button>(R.id.addition_btn)
         addition_btn.setOnClickListener{
             val intent = Intent(this, Addition::class.java)
@@ -51,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             alertDialog.setCancelable(false)
             alertDialog.show()
 
-
         }
+
     }
 }
