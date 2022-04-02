@@ -1,8 +1,10 @@
 package com.example.mentalmath
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -10,20 +12,28 @@ import kotlinx.android.synthetic.main.activity_addition.*
 
 class Subtraction : AppCompatActivity() {
     private var equation: String = ""
-    private var firstnum = (1..500).random()
-    private var secondnum = (1..500).random()
+    private var firstnum = (1..20).random()
+    private var secondnum = (1..10).random()
 
     //for the buttons
     var isNewOp = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_subtraction)
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
         if (firstnum > secondnum){
             equation = "$firstnum - $secondnum"
             editText.setText(equation)
         }else{
             equation = "$secondnum - $firstnum"
             editText.setText(equation)
+        }
+        val homeBtn = findViewById<Button>(R.id.home_btn)
+        homeBtn.setOnClickListener {
+            val home = Intent(this, MainActivity::class.java)
+            startActivity(home)
         }
         }
     fun numberEvent(view: View){

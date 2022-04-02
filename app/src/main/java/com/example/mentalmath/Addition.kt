@@ -3,6 +3,7 @@ package com.example.mentalmath
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -28,8 +29,8 @@ class Addition : AppCompatActivity() {
 
     private var correctAnswer: Int = 0
     private var equation: String = ""
-    private var firstnum = (1..500).random()
-    private var secondnum = (1..500).random()
+    private var firstnum = (1..30).random()
+    private var secondnum = (1..30).random()
     // Stats
     private var num_of_correct = 0
     private var wrong = 0
@@ -41,10 +42,18 @@ class Addition : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addition)
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
         equation = "$firstnum + $secondnum"
 
         val question = findViewById<TextView>(R.id.editText)
         question.text = equation
+
+        val homeBtn = findViewById<Button>(R.id.home_btn)
+        homeBtn.setOnClickListener {
+            val home = Intent(this, MainActivity::class.java)
+            startActivity(home)
+        }
 
     }
     fun numberEvent(view: View){
